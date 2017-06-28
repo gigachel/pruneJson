@@ -9,3 +9,16 @@ body {
 .files {
   display: inline-block;
 }
+
+.jsontree_label {
+  padding: 10px;
+  background: rgba(15, 131, 232, 0.5);
+}
+
+.jsontree_node  {
+  padding: 9px 0;
+}
+
+.jsontree_label-wrapper {
+  padding-top: 5px;
+}
