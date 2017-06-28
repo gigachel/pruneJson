@@ -1,0 +1,166 @@
+{
+	"data": [
+		{
+			"ficheAdministrative": {
+				"entiteJuridiquePaysImmatriculation": {},
+				"entiteJuridiqueCodeNaf": {},
+				"entiteJuridiqueFormeJuridique": {}
+			},
+			"qualite": {},
+			"etablissement": [
+				{
+					"informationGenerale": {},
+					"coordonneesBancairesEtablissement": [
+						{
+							"coordonneesBancairesEtablissementPays": {},
+							"coordonneesBancairesEtablissementTypeEntiteJuridique": [
+								{}
+							],
+							"coordonneesBancairesEtablissementNatureFournisseur": [
+								{}
+							],
+							"coordonneesBancairesEtablissementReferenceExterne": {},
+							"travailleAvec": [
+								{}
+							]
+						}
+					],
+					"conditionReglementEtablissement": [
+						{
+							"conditionReglementEtablissementDelaiDeReglement": {},
+							"travailleAvec": [
+								{}
+							]
+						}
+					],
+					"adresseEtablissement": [
+						{
+							"adresse": {
+								"adressePostale": {
+									"adresseEtablissementPays": {}
+								},
+								"travailleAvec": [
+									{}
+								],
+								"contactAdresse": [
+									{
+										"detailContact": {
+											"contactAdressePays": {}
+										},
+										"structureOrganisationnelle": {
+											"contactAdresseStructureOrganisationnelle": {}
+										},
+										"portugal": {},
+										"travailleAvec": [
+											{}
+										]
+									}
+								]
+							},
+							"modaliteEchangeEtablissement": [
+								{}
+							]
+						}
+					],
+					"contactEtablissement": [
+						{
+							"contact": {
+								"contactEtablissementStructureOrganisationnelle": {},
+								"contactEtablissementPays": {},
+								"contactEtablissementLangue": {},
+								"travailleAvec": [
+									{}
+								]
+							},
+							"typeContact": {}
+						}
+					],
+					"etablissementReferenceExterne": [
+						{}
+					]
+				}
+			],
+			"role": [
+				{
+					"rolePays": {}
+				}
+			],
+			"marque": [
+				{
+					"marqueMarque": {}
+				}
+			],
+			"observation": [
+				{}
+			],
+			"entiteJuridiqueNatureFournisseur": [
+				{}
+			],
+			"entiteJuridiqueTypeEntiteJuridique": [
+				{}
+			],
+			"typeProcedure": [
+				{}
+			],
+			"filiereFournisseur": [
+				{
+					"travailleAvec": [
+						{}
+					],
+					"conditionReglementFiliereFournisseur": [
+						{
+							"conditionReglementFiliereFournisseurDelaiDeReglement": {},
+							"travailleAvec": [
+								{}
+							]
+						}
+					],
+					"coordonneeBancaireFiliereFournisseur": [
+						{
+							"coordonneesBancairesFiliereFournisseurPays": {},
+							"coordonneesBancairesFiliereFournisseurTypeEntiteJuridique": [
+								{}
+							],
+							"coordonneesBancairesFiliereFournisseurNatureFournisseur": [
+								{}
+							],
+							"coordonneesBancairesFiliereFournisseurReferenceExterne": {},
+							"travailleAvec": [
+								{}
+							]
+						}
+					],
+					"objectifApprovisionnement": [
+						{}
+					],
+					"contrainteApprovisionnement": [
+						{}
+					],
+					"ligneFiliere": [
+						{
+							"adresseLigneFiliere": {
+								"adresse": {
+									"adressePostale": {
+										"adresseLigneFilierePays": {}
+									},
+									"travailleAvec": [
+										{}
+									]
+								},
+								"modaliteEchangeLigneFiliere": [
+									{}
+								]
+							}
+						}
+					]
+				}
+			],
+			"entiteJuridiqueFederation": [
+				{}
+			],
+			"travailleAvec": [
+				{}
+			]
+		}
+	]
+}

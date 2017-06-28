@@ -1,0 +1,25 @@
+Nom macro-attribut;Remarques;Lien vers l'onglet dans ce fichier;json name
+donnee_generale_identification;;donnee_generale_identification!A1;top_object
+donnee_generale_lot;;;donneesGeneralesLot
+donnee_generale_marque_fournisseur;;;donneeGeneraleMarqueFournisseur
+nomenclature;;;nomenclature
+info_vente_libelle;;;infoVenteLibelle
+info_vente_specificite_marche;;;infoAchatSpecificiteMarche
+info_vente_information_magasin;;;infoVenteInformationMagasin
+info_vente_dimension;;;infoVenteDimension
+info_vente_asset;;;infoVenteAsset
+info_achat_generalite;;;infoAchatGeneralite
+info_achat_information_commande;;;infoAchatInformationCommande
+info_achat_provenance;;;infoAchatProvenance
+info_achat_specificite_marche;;;logistiqueSpecificiteMarche
+logistique_identification;;;logistiqueIdentification
+logistique_information_commande;;;logistiqueInformationCommande
+logistique_support_emballage;;;logistiqueSupportEmballage
+logistique_specificite_marche;;;logistiqueSpecificiteMarche
+logistique_variante;;;logistiqueVariante
+droit_et_taxe;;;droitsEtTaxes
+qualite_et_reglementation;;;qualiteEtReglementation
+securite;;;securite
+chainage;;;chainage
+article;;;article
+article_type_box;;;articleTypeBox

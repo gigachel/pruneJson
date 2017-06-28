@@ -1,0 +1,707 @@
+{
+	"data": [
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b980",
+			"libelleTarif": "libelleTarif6",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b1",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507175",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2017,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "z",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "b",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "c",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b985",
+			"libelleTarif": "libelleTarif1",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b6",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507170",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2016,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "e",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "f",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "g",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [
+				{
+					"identifiantUniqueLigneProduitPrix": "bf57f210-449c-49b6-9e21-05b71de6b987",
+					"numeroOrdreProduit": 1,
+					"identifiantUniqueGtinUcUl": "bf57f210-449c-49b6-9e21-05a71de6b987",
+					"codeSapFabricant": 3,
+					"gtinTailleCo": "gtin_taille",
+					"ligneProduitPrixTypeDePrix": {
+						"libelle": "Mister",
+						"idMetier": "ai",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"prixBase": 4,
+					"ligneProduitPrixZoneGeographique": {
+						"identifiantUniqueZoneGeographique": "af57f210-449c-49b6-9e21-05b71de6b987",
+						"libelle": "libelle",
+						"codeMetier": "b",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": "2016-12-31T23:00:00Z",
+						"niveau": 1,
+						"identifiantUniquePere": "bf57f210-449c-49b6-9e21-05b71de6b985",
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"dateDebutValiditePrix": "2017-03-30T22:00:00Z",
+					"dateFinValiditePrix": "2017-03-30T22:00:00Z",
+					"flagMiseADispoMouvement": true,
+					"flagAdditif": true,
+					"identifiantUniqueContrat": "af57f210-449c-49b6-9e21-05b71de6b982",
+					"quantiteUcLieesPrixBase": 5,
+					"identifiantUniqueGtinUlConditionAchat": "af57f210-449c-49b6-9e21-05b71de6b983",
+					"flagEmpotage": true,
+					"flagAlloti": true,
+					"flagTarifAValiderGtGalec": true,
+					"ligneProduitPrixStatutDeValidationDeTarif": {
+						"libelle": "Mister",
+						"idMetier": "ah",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"calibre": "calibre",
+					"categorie": "categorie",
+					"variete": "variete",
+					"dateApplicationNegocieeGt": "2017-03-30T22:00:00Z",
+					"dateSaisieApplicationNegocieeGt": "2017-03-30T22:00:00Z",
+					"commentaireValidationGt": "commentaire_validation_1",
+					"codeService": 6,
+					"marche": 7,
+					"ligneProduitPrixEntiteNegociePrix": {
+						"libelle": "Mister",
+						"idMetier": "ag",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"ligneProduitPrixEntite": {
+						"libelle": "Mister",
+						"idMetier": "af",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"dateCreation": "2017-02-22T23:00:00Z",
+					"dateMaj": "2017-04-29T22:00:00Z",
+					"travailleAvec": [
+						{
+							"identifiantUniqueTravailleAvec": "80bdcc4b-4239-4170-b137-11ae3da9c70b",
+							"ligneProduitPrixEntiteSelection": {
+								"libelle": "Mister",
+								"idMetier": "ah",
+								"actif": true,
+								"dateDebutValidite": "2016-12-31T23:00:00Z",
+								"dateFinValidite": null,
+								"dateCreation": "2016-12-31T23:00:00Z",
+								"dateMaj": "2016-12-31T23:00:00Z"
+							},
+							"flagTravailleAvec": true,
+							"dateDebut": "2016-12-31T23:00:00Z",
+							"dateFin": "2017-12-31T23:00:00Z"
+						}
+					]
+				}
+			],
+			"palier": [
+				{
+					"identifiantUniquePalier": "af57f210-449c-49b6-9e21-05b71de6b989",
+					"codePalier": 4,
+					"valeurMiniPalier": 34,
+					"valeurMaxiPalier": 67,
+					"enteteTarifUniteDeMesure": {
+						"libelle": "Mister",
+						"idMetier": "ab",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					}
+				},
+				{
+					"identifiantUniquePalier": "af57f210-449c-49b6-9e21-05b71de6b988",
+					"codePalier": 3,
+					"valeurMiniPalier": 24,
+					"valeurMaxiPalier": 78,
+					"enteteTarifUniteDeMesure": {
+						"libelle": "Mister",
+						"idMetier": "ab",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					}
+				},
+				{
+					"identifiantUniquePalier": "af57f210-449c-49b6-9e21-05b71de6b982",
+					"codePalier": 1,
+					"valeurMiniPalier": 22,
+					"valeurMaxiPalier": 88,
+					"enteteTarifUniteDeMesure": {
+						"libelle": "Mister",
+						"idMetier": "aa",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					}
+				},
+				{
+					"identifiantUniquePalier": "af57f210-449c-49b6-9e21-05b71de6b987",
+					"codePalier": 2,
+					"valeurMiniPalier": 12,
+					"valeurMaxiPalier": 89,
+					"enteteTarifUniteDeMesure": {
+						"libelle": "Mister",
+						"idMetier": "aa",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					}
+				}
+			],
+			"paysTarif": [
+				{
+					"enteteTarifPays": {
+						"identifiantUniquePays": "433725d2-83f9-4895-8009-e7ef8bc4bfa6",
+						"libelle": "�land(les �les)",
+						"codeAlpha2": "AX",
+						"codeAlpha3": "ALA",
+						"idMetier": 5,
+						"actif": true,
+						"sepa": true,
+						"ue": true,
+						"dateDebutValidite": "2017-02-01T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2017-02-01T23:00:00Z",
+						"dateMaj": "2017-02-01T23:00:00Z"
+					}
+				}
+			],
+			"zoneGeoTarif": [
+				{
+					"enteteTarifZoneGeographique": {
+						"identifiantUniqueZoneGeographique": "bf57f210-449c-49b6-9e21-05b71de6b985",
+						"libelle": "libelle",
+						"codeMetier": "a",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": "2016-12-31T23:00:00Z",
+						"niveau": 1,
+						"identifiantUniquePere": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					}
+				}
+			]
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b982",
+			"libelleTarif": "libelleTarif8",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b3",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507177",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2017,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "h",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "l",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "m",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b983",
+			"libelleTarif": "libelleTarif9",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b4",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507178",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2018,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "n",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "M",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "W",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b986",
+			"libelleTarif": "libelleTarif2",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b7",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507171",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2017,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "F",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "r",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "Z",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [
+				{
+					"identifiantUniquePalier": "bf57f210-449c-49b6-9e21-05b71de6b989",
+					"codePalier": 5,
+					"valeurMiniPalier": 44,
+					"valeurMaxiPalier": 67,
+					"enteteTarifUniteDeMesure": {
+						"libelle": "Mister",
+						"idMetier": "ae",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": null,
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					}
+				}
+			],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b981",
+			"libelleTarif": "libelleTarif7",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b2",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507176",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2015,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "i",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "j",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "k",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b984",
+			"libelleTarif": "libelleTarif0",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b5",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507179",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2017,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "E",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "q",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "Y",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b987",
+			"libelleTarif": "libelleTarif3",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b8",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507172",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2015,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "I",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "u",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "ac",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b988",
+			"libelleTarif": "libelleTarif4",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b9",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507173",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2015,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "J",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "v",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "ad",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		},
+		{
+			"identifiantUniqueEnteteTarif": "df57f210-449c-49b6-9e21-05b71de6b989",
+			"libelleTarif": "libelleTarif5",
+			"identifiantUniqueEntiteJuridiqueFournisseur": "a491afdc-3668-4b89-98f2-47d20a28e8b0",
+			"identifiantUniqueEntiteJuridiqueFabricant": "2a7cbfa3-4769-4d81-a0bf-b278d7507174",
+			"indicateurPalier": true,
+			"enteteTarifSaisonTextile": {
+				"libelle": "Mister",
+				"idMetier": "d",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"anneeSaison": 2017,
+			"enteteTarifCodeIncoterm": {
+				"libelle": "Mister",
+				"idMetier": "B",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifDevise": {
+				"libelle": "Mister",
+				"idMetier": "o",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"enteteTarifEntite": {
+				"libelle": "Mister",
+				"idMetier": "V",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": null,
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2017-03-27T22:00:00Z",
+			"dateMaj": "2017-03-28T22:00:00Z",
+			"ligneProduitPrix": [],
+			"palier": [],
+			"paysTarif": [],
+			"zoneGeoTarif": []
+		}
+	]
+}

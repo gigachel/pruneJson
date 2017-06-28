@@ -1,0 +1,11 @@
+body {
+  padding: 20px;
+}
+
+.line > * {
+  vertical-align: top;
+}
+
+.files {
+  display: inline-block;
+}

@@ -1,0 +1,368 @@
+{
+	"data": [
+		{
+			"identifiantUniquePointVente": "f90cd543-5ee0-4dbd-b986-52e980f25ff2",
+			"identifiantMetier": 6,
+			"nomPointVente": "DPOINT VENTE",
+			"surfaceTotaleActuelle": "800",
+			"codeCaisse": 8,
+			"numeroOrdrePdv": "6",
+			"codePanonceauPdv": "JKL",
+			"codeActivitePdv": "IJ",
+			"pointDeVenteTypeDeLocalisation": {
+				"libelle": "Signataire contrat",
+				"idMetier": "SIG",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": "2016-12-31T23:00:00Z",
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"pointDeVenteEnseigne": {
+				"libelle": "Cordoba oro",
+				"idMetier": "NIO",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": "2016-12-31T23:00:00Z",
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"hebergePar": "HPOINT VENTE",
+			"dateOuverture": "2019-05-09T22:00:00Z",
+			"dateFermeture": "2020-06-10T22:00:00Z",
+			"commentaire": "commentaireD",
+			"photoPointVente": "Photo point de venteD",
+			"hyper": true,
+			"pointDeVenteEntite": {
+				"libelle": "Couronne norvégienne",
+				"idMetier": "NOK",
+				"actif": true,
+				"dateDebutValidite": "2016-12-31T23:00:00Z",
+				"dateFinValidite": "2016-12-31T23:00:00Z",
+				"dateCreation": "2016-12-31T23:00:00Z",
+				"dateMaj": "2016-12-31T23:00:00Z"
+			},
+			"dateCreation": "2019-03-29T23:00:00Z",
+			"dateMaj": "2020-05-29T22:00:00Z",
+			"gln": [
+				{
+					"identifiantUniqueGln": "2ca39d5a-ec25-49a8-9412-a686420186d9",
+					"pointDeVenteTypeGln": {
+						"libelle": "Siège ",
+						"idMetier": "SIE",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": "2016-12-31T23:00:00Z",
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"codeLieuFonction": "CLF "
+				}
+			],
+			"adressePointDeVente": {
+				"identifiantUniqueAdressePointDeVente": "0c89b752-93cd-41f3-8bbc-0db03f6bc35f",
+				"identificationDestinataire": "identification3",
+				"service": "service",
+				"complement": "complement",
+				"numeroVoie": "40",
+				"libelleVoie": "libelle3",
+				"mentionSpecialeDistribution": "mentionSpecialeDistribution",
+				"codePostal": "33001",
+				"ville": "Bordeaux 1",
+				"pays": "07ecb313-757d-4283-9f02-4198b7327798",
+				"geoLocalisationLatitude": "geoLocalisationLatitude",
+				"geoLocalisationLongitude": "geoLocalisationLongitude",
+				"telephoneStandard": "0000000000",
+				"faxStandard": "1122334455"
+			},
+			"pointVenteActiviteCommerciale": [
+				{
+					"pointDeVenteActiviteCommerciale": {
+						"libelle": "Collectif client",
+						"idMetier": "CLI",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": "2016-12-31T23:00:00Z",
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"debutPeriodeActivite": "2015-05-05T22:00:00Z",
+					"finPeriodeActivite": "2006-08-05T22:00:00Z"
+				}
+			],
+			"pointVenteEntiteJuridiquePossession": [
+				{
+					"identifiantUniqueSociete": "4eb8af3d-e66c-40a2-9d67-9843075c21bc",
+					"dateDebutAppartenanceSocietePdv": "2012-05-05T22:00:00Z",
+					"dateFinAppartenanceSocietePdv": "2015-05-08T22:00:00Z"
+				}
+			],
+			"pointVenteEntiteJuridiqueTravaille": [
+				{
+					"identifiantUniqueEntiteJuridiqueTravaillee": "4eb8af3d-e66c-40a2-9d67-9843075c21bc",
+					"dateDebutTravailleAvecPdv": "2014-05-08T22:00:00Z",
+					"dateFinTravailleAvecPdv": "2018-09-05T22:00:00Z"
+				}
+			],
+			"pointVentePointGestion": [
+				{
+					"pointGestion": {
+						"identifiantUniquePointGestion": "1d0e00f1-30f9-4afa-9540-42369f974184",
+						"identifiantMetier": "7",
+						"numeroOrdrePdg": "8",
+						"codePanonceauPdg": "CPAN",
+						"codeActivitePdg": "EF",
+						"nomPointGestion": "nom point gestion D",
+						"pointGestionTypeDePointDeGestion": {
+							"libelle": "Centrale pays",
+							"idMetier": "SCAP",
+							"actif": true,
+							"dateDebutValidite": "2016-12-31T23:00:00Z",
+							"dateFinValidite": "2016-12-31T23:00:00Z",
+							"dateCreation": "2016-12-31T23:00:00Z",
+							"dateMaj": "2016-12-31T23:00:00Z"
+						},
+						"pointGestionEntite": {
+							"libelle": "Centrale généraliste",
+							"idMetier": "SCAG",
+							"actif": true,
+							"dateDebutValidite": "2016-12-31T23:00:00Z",
+							"dateFinValidite": "2016-12-31T23:00:00Z",
+							"dateCreation": "2016-12-31T23:00:00Z",
+							"dateMaj": "2016-12-31T23:00:00Z"
+						},
+						"codeLieuFonction": "9 ",
+						"commentaireDestinationConsommateur": "commentaire consommateur C",
+						"commentaire": "commentaire C",
+						"dateDebutPointGestion": "2019-02-02T23:00:00Z",
+						"dateFinPointGestion": "2020-02-02T23:00:00Z",
+						"dateCreation": "2018-02-02T23:00:00Z",
+						"dateMaj": "2019-02-02T23:00:00Z",
+						"adressePointGestion": {
+							"identifiantUniqueAdressePointGestion": "a4fbdabc-38e5-462d-a41f-d04aac5fe41e",
+							"identificationDestinataire": "identification6",
+							"service": "service3",
+							"complement": "complement3",
+							"numeroVoie": "70",
+							"libelleVoie": "libelle6",
+							"mentionSpecialeDistribution": "mention_speciale3",
+							"codePostal": "33004",
+							"ville": "Lyon",
+							"pays": "0e880884-9c3d-4068-87ff-4e43e263375b",
+							"geoLocalisationLatitude": "latitude6",
+							"geoLocalisationLongitude": "longitude8",
+							"telephoneStandard": "0011448855",
+							"faxStandard": "Afax2"
+						},
+						"pointGestionEntiteJuridique": [
+							{
+								"identifiantUniqueSociete": "164a55fd-c93f-45a7-a255-97bae04c0638",
+								"dateDebutAppartenanceSocietePdg": "2020-02-02T23:00:00Z",
+								"dateFinAppartenanceSocietePdg": "2020-05-02T22:00:00Z"
+							},
+							{
+								"identifiantUniqueSociete": "ca3d18a2-f833-4cb4-9e47-ac2171487d71",
+								"dateDebutAppartenanceSocietePdg": "2023-02-02T23:00:00Z",
+								"dateFinAppartenanceSocietePdg": "2024-05-02T22:00:00Z"
+							}
+						]
+					},
+					"dateDebutRattachementPointGestionPointVente": "2011-08-06T22:00:00Z",
+					"dateFinRattachementPointGestionPointVente": "2029-08-06T22:00:00Z"
+				}
+			],
+			"rayon": [
+				{
+					"identifiantUniqueRayon": "8fb993d1-3d22-480a-8ff5-8a09ad535b5c",
+					"libelleRayon": "libelleRayon",
+					"surfaceRayon": 125,
+					"dateCreationRayon": "2017-02-01T23:00:00Z",
+					"dateFermetureRayon": "2017-02-01T23:00:00Z",
+					"commentaireRayon": "commentaire",
+					"rayonEntite": {
+						"libelle": "Qualité Suppléant",
+						"idMetier": "QSU",
+						"actif": true,
+						"dateDebutValidite": "2016-12-31T23:00:00Z",
+						"dateFinValidite": "2016-12-31T23:00:00Z",
+						"dateCreation": "2016-12-31T23:00:00Z",
+						"dateMaj": "2016-12-31T23:00:00Z"
+					},
+					"dateCreation": "2017-02-01T23:00:00Z",
+					"dateMaj": "2017-02-01T23:00:00Z"
+				}
+			],
+			"centreCommercial": {
+				"identifiantUniqueCentreCommercial": "62130064-7d39-471f-b2b3-e9cd2e7826a0",
+				"identifiantMetier": 9,
+				"nomCentreCommercial": "Centre commercial F",
+				"centreCommercialEntite": {
+					"libelle": "Tennant Company",
+					"idMetier": "Tenna",
+					"actif": true,
+					"dateDebutValidite": "2016-12-31T23:00:00Z",
+					"dateFinValidite": "2016-12-31T23:00:00Z",
+					"dateCreation": "2016-12-31T23:00:00Z",
+					"dateMaj": "2016-12-31T23:00:00Z"
+				},
+				"dateCreation": "2023-05-19T22:00:00Z",
+				"dateMaj": "2024-05-29T22:00:00Z",
+				"adresseCentreCommercial": {
+					"identifiantUniqueAdresseCentreCommercial": "c4fbdabc-38e5-462d-a41f-d04aac5fe41e",
+					"identificationDestinataire": "test2_identification",
+					"service": "test2_service",
+					"complement": "test2_complement",
+					"numeroVoie": "90",
+					"libelleVoie": "test1_libelle",
+					"mentionSpecialeDistribution": "test2_mention_speciale",
+					"codePostal": "99000",
+					"ville": "Paris",
+					"pays": "022072d2-2896-4b55-a073-38897d977724",
+					"geoLocalisationLatitude": "test2_lat",
+					"geoLocalisationLongitude": "test2_long",
+					"telephoneStandard": "6655442211",
+					"faxStandard": "7755442211"
+				}
+			},
+			"pointVenteZoneChalandise": [
+				{
+					"identifiantUniquePointVenteZoneChalandise": "21e17a59-294e-4f97-b995-197b0c9fae94",
+					"zoneChalandise": {
+						"identifiantUniqueZoneChalandise": "c7ddeb05-90f3-4665-a53a-9abd9e5d1b47",
+						"identifiantMetier": 3,
+						"codePanonceauZc": "codePanonceauZc",
+						"zoneChalandiseStatutDuPanonceau": {
+							"libelle": "Secondaire",
+							"idMetier": "SEC",
+							"actif": true,
+							"dateDebutValidite": "2016-12-31T23:00:00Z",
+							"dateFinValidite": "2016-12-31T23:00:00Z",
+							"dateCreation": "2016-12-31T23:00:00Z",
+							"dateMaj": "2016-12-31T23:00:00Z"
+						},
+						"nomZoneChalandise": "nom zone",
+						"dateDebutZoneChalandise": "2017-06-05T22:00:00Z",
+						"dateFinZoneChalandise": "2017-06-05T22:00:00Z",
+						"zoneChalandiseEntite": {
+							"libelle": "Fournisseur générique",
+							"idMetier": "FGEN",
+							"actif": true,
+							"dateDebutValidite": "2016-12-31T23:00:00Z",
+							"dateFinValidite": "2016-12-31T23:00:00Z",
+							"dateCreation": "2016-12-31T23:00:00Z",
+							"dateMaj": "2016-12-31T23:00:00Z"
+						},
+						"dateCreation": "2017-03-28T22:00:00.419Z",
+						"dateMaj": "2017-03-28T22:00:00.419Z",
+						"zoneChalandiseZoneGeographique": [
+							{
+								"zoneChalandiseZoneGeographique": {
+									"identifiantUniqueZoneGeographique": "a10a848f-bbb7-4594-933c-5246d74f3fc6",
+									"libelle": "france",
+									"idMetier": "id metier",
+									"actif": true,
+									"dateDebutValidite": "2016-08-06T22:00:00Z",
+									"dateFinValidite": "2024-08-06T22:00:00Z",
+									"dateCreation": "2013-07-08T22:00:00Z",
+									"dateMaj": "2015-08-03T22:00:00Z",
+									"niveau": 5,
+									"identifiantUniquePere": "6624862d-04ae-435c-8d13-c4eda8ff8b6c"
+								},
+								"dateDebutRattachementRegionZoneChalandise": "2017-05-02T22:00:00Z",
+								"dateFinRattachementRegionZoneChalandise": "2017-06-04T22:00:00Z"
+							}
+						],
+						"zoneChalandiseAdherent": [
+							{
+								"adherent": {
+									"identifiantUniqueAdherent": "504a7159-e89c-43ca-868f-481792e5a09a",
+									"identifiantMetier": "3 ",
+									"adherentCivilite": {
+										"libelle": "Monsieur",
+										"idMetier": "MR",
+										"actif": true,
+										"dateDebutValidite": "2016-12-31T23:00:00Z",
+										"dateFinValidite": "2016-12-31T23:00:00Z",
+										"dateCreation": "2016-12-31T23:00:00Z",
+										"dateMaj": "2016-12-31T23:00:00Z"
+									},
+									"nomAdherent": "nom adherent",
+									"prenomAdherent": "prenom adherent",
+									"dateDebutAdhesion": "2017-01-04T23:00:00Z",
+									"dateFinAdhesion": "2017-02-01T23:00:00Z",
+									"adherentStatutAdherent": {
+										"libelle": "Dobra",
+										"idMetier": "STD",
+										"actif": true,
+										"dateDebutValidite": "2016-12-31T23:00:00Z",
+										"dateFinValidite": "2016-12-31T23:00:00Z",
+										"dateCreation": "2016-12-31T23:00:00Z",
+										"dateMaj": "2016-12-31T23:00:00Z"
+									},
+									"adherentTypeAdherent": {
+										"libelle": "RED BULL",
+										"idMetier": "RED B",
+										"actif": true,
+										"dateDebutValidite": "2016-12-31T23:00:00Z",
+										"dateFinValidite": "2016-12-31T23:00:00Z",
+										"dateCreation": "2016-12-31T23:00:00Z",
+										"dateMaj": "2016-12-31T23:00:00Z"
+									},
+									"adherentEntite": {
+										"libelle": "Cordoba oro",
+										"idMetier": "NIO",
+										"actif": true,
+										"dateDebutValidite": "2016-12-31T23:00:00Z",
+										"dateFinValidite": "2016-12-31T23:00:00Z",
+										"dateCreation": "2016-12-31T23:00:00Z",
+										"dateMaj": "2016-12-31T23:00:00Z"
+									},
+									"dateCreation": "2017-02-01T23:22:00Z",
+									"dateMaj": "2017-01-14T23:00:00Z",
+									"adherentEntiteJuridique": [
+										{
+											"identifiantUniqueSociete": "964e3e17-c3f4-4e4c-8072-9a6c82216216",
+											"dateDebutAppartenanceSocieteAdherent": "2018-02-01T23:00:00Z",
+											"dateFinAppartenanceSocieteAdherent": "2019-02-04T23:00:00Z"
+										},
+										{
+											"identifiantUniqueSociete": "133f54c5-5577-4db6-96ac-0ddb88a82ec1",
+											"dateDebutAppartenanceSocieteAdherent": "2017-02-02T23:00:00Z",
+											"dateFinAppartenanceSocieteAdherent": "2017-05-01T22:00:00Z"
+										},
+										{
+											"identifiantUniqueSociete": "1ab7f429-3eed-4537-85a1-ba9423bacdd1",
+											"dateDebutAppartenanceSocieteAdherent": "2018-02-02T23:00:00Z",
+											"dateFinAppartenanceSocieteAdherent": "2019-05-01T22:00:00Z"
+										}
+									]
+								},
+								"dateDebutAppartenance": "2017-11-11T23:00:00Z",
+								"dateFinAppartenance": "2019-12-11T23:00:00Z"
+							}
+						],
+						"zoneChalandiseEntiteJuridique": [
+							{
+								"identifiantUniqueSociete": "11e17a59-294e-4f97-b995-197b0c9fae93",
+								"dateDebutAppartenanceSocieteZc": "2015-08-07T22:00:00Z",
+								"dateFinAppartenanceSocieteZc": "2018-08-04T22:00:00Z"
+							}
+						]
+					},
+					"dateDebutAppartenanceZc": "2014-08-04T22:00:00Z",
+					"dateFinAppartenanceZc": "2014-08-08T22:00:00Z"
+				}
+			],
+			"horaire": [
+				{
+					"identifiantUniqueHoraire": "4eb8af3d-e66c-40a2-9d67-9843075c21bc",
+					"jourSemaine": "mercredi",
+					"horaireMatinDebut": "08:00",
+					"horaireFinMatin": "12:00",
+					"horaireApresMidiDebut": "13:00",
+					"horaireApresMidiFin": "19:30"
+				}
+			]
+		}
+	]
+}
