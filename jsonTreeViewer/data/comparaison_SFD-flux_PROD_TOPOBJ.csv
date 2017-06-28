@@ -1,0 +1,38 @@
+Donn‚es Flux donn‚es API;;;Donn‚es SFD;;;;
+Macro-attribut;Collection;Attribut;Macro-attribut;Collection;Attribut;Nom macro-attribut Codification;Nom table Codif
+;;identifiantUniqueDonneeGeneraleIdentification;donnee_generale_identification;;identifiant_unique_donnee_generale_identification;;
+;;indicateurGtinGenere;donnee_generale_identification;;indicateur_gtin_genere;;
+;;champAddOn;donnee_generale_identification;;champ_add_on;;
+;;motifAddOn;donnee_generale_identification;;motif_add_on;;
+;;dateCreationAddOn;donnee_generale_identification;;date_creation_add_on;;
+;;gtin;donnee_generale_identification;;gtin;;
+;;codeSap;donnee_generale_identification;;code_sap;;
+;;identifiantUniqueFournisseurInformation;donnee_generale_identification;;identifiant_unique_fournisseur_information;;
+;;dGITypologieProduitUc;donnee_generale_identification;;typologie_produit_uc (DGI_typologie_produit_uc);typologie_de_produit;structure_generique
+;;libelleStandard;donnee_generale_identification;;libelle_standard;;
+;;indicateurProduitMesureVariable;donnee_generale_identification;;indicateur_produit_mesure_variable;;
+;;codePoidsVariable;donnee_generale_identification;;code_poids_variable;;
+;;observation;donnee_generale_identification;;observation;;
+;;observationInterneSca;donnee_generale_identification;;observation_interne_sca;;
+;;produitADecouper;donnee_generale_identification;;produit_a_decouper;;
+;;produitDematerialise;donnee_generale_identification;;produit_dematerialise;;
+;;indicateurConsigne;donnee_generale_identification;;indicateur_consigne;;
+;;flagProduitAvecGratuite;donnee_generale_identification;;flag_produit_avec_gratuite;;
+;;nombreProduitDifferentDansLot;donnee_generale_identification;;nombre_produit_different_dans_lot;;
+;;dGIEntite;donnee_generale_identification;;proprietaire (DGI_entite);;
+;;dateCreation;donnee_generale_identification;;date_creation;;
+;;dateMaj;donnee_generale_identification;;date_maj;;
+;validiteProduit;identifiantUniqueValiditeProduit;donnee_generale_identification;validite_produit;identifiant_unique_validite_produit;;
+;validiteProduit;identifiantUniqueFournisseurInformation;donnee_generale_identification;validite_produit;identifiant_unique_fournisseur_information;;
+;validiteProduit;dGITypeDePeriodeProduit;donnee_generale_identification;validite_produit;identifiant_unique_type_periode (DGI_type_de_periode_produit);;
+;validiteProduit;dGIPeriodeProduit;donnee_generale_identification;validite_produit;identifiant_unique_periode (DGI_periode_produit);;
+;validiteProduit;dateDebutValiditePeriode;donnee_generale_identification;validite_produit;date_debut_validite_periode;;
+;validiteProduit;dateFinValiditePeriode;donnee_generale_identification;validite_produit;date_fin_validite_periode;;
+;travailleAvec;identifiantUniqueTravailleAvec;donnee_generale_identification;travaille_avec;identifiant_unique_travaille_avec;;
+;travailleAvec;dGIEntiteSelection;donnee_generale_identification;travaille_avec;entite_selection (DGI_entite_selection);;
+;travailleAvec;flagTravailleAvec;donnee_generale_identification;travaille_avec;flag_travaille_avec;;
+;travailleAvec;dateDebut;donnee_generale_identification;travaille_avec;date_debut;;
+;travailleAvec;dateFin;donnee_generale_identification;travaille_avec;date_fin;;
+;;;;;;;
+;;;;;;;
+Accueil!A1;;;;;;;

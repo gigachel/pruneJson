@@ -11,7 +11,10 @@ body {
 }
 
 .jsontree_label {
-  padding: 10px;
+  /*display: inline-block;
+  width: 300px;
+  text-align: center;*/
+  padding: 8px;
   background: rgba(15, 131, 232, 0.5);
 }
 
@@ -19,6 +22,15 @@ body {
   padding: 9px 0;
 }
 
-.jsontree_label-wrapper {
+/*.jsontree_label-wrapper {
   padding-top: 5px;
+}*/
+
+.jsontree_child-nodes {
+  margin-top: 9px;
+}
+
+.jsontree_node {
+  /*display: block;
+  overflow: hidden;*/
 }

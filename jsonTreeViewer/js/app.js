@@ -3,6 +3,10 @@ document.getElementById('filters-file').addEventListener('change', readFiltersFi
 document.getElementById('filters-file').addEventListener('click', function() { this.value = null; }, false);
 document.getElementById("filterBtn").addEventListener('click', goFilter, false);
 
+$('input[type=radio][name=column]').change(function() {
+  setFilterWords(parsedCSV, Number(this.value));
+});
+
 // var json = {};
 var json = ﻿{
 	"data": [{
@@ -2279,7 +2283,10 @@ var json = ﻿{
 		}
 	]
 };
+var parsedCSV;
 var filters = [];
+// filtersWords = "donneesGeneralesLot\ndonneeGeneraleMarqueFournisseur\nnomenclature\ninfoVenteLibelle\ninfoAchatSpecificiteMarche\ninfoVenteInformationMagasin\ninfoVenteDimension\ninfoVenteAsset\ninfoAchatGeneralite\ninfoAchatInformationCommande\ninfoAchatProvenance\nlogistiqueSpecificiteMarche\nlogistiqueIdentification\nlogistiqueInformationCommande\nlogistiqueSupportEmballage\nlogistiqueSpecificiteMarche\nlogistiqueVariante\ndroitsEtTaxes\nqualiteEtReglementation\nsecurite\nchainage\narticle\narticleTypeBox";
+// document.getElementById("filters").value = filtersWords;
 
 function readJsonFile(e) {
   var file = e.target.files[0];
@@ -2302,34 +2309,50 @@ function readFiltersFile(e) {
   reader.onload = function(e) {
     CSV.COLUMN_SEPARATOR = ";";
 
-    filtersWords = CSV.parse(e.target.result)
-    .map(function(row) {
-      return row[3]; // get 4 column
-    })
-    .filter(function(wrd) {
-      return wrd;
-    })
-    .slice(2) // remove header
-    .join("\n");
+    parsedCSV = CSV.parse(e.target.result);
+		var column = Number($('input[type=radio][name=column]:checked').val());
+		setFilterWords(parsedCSV, column);
 
-    document.getElementById("filters").value = filtersWords;
   };
   reader.readAsText(file);
 }
 
+function setFilterWords(pCsv, col) {
+	if (pCsv && pCsv.length > 0) {
+		filtersWords = pCsv
+		.map(function(row) {
+			// return row[3]; // get 4 column
+			// return row[2]; // get 3 column
+			return row[col - 1]; // get 3 column
+		})
+		.filter(function(wrd) {
+			return wrd && wrd !== "top_object";
+		})
+		.slice(1) // remove header
+		.join("\n");
+
+		document.getElementById("filters").value = filtersWords;
+	}
+}
+
 function goFilter() {
   var jsonClone = JSON.parse(JSON.stringify(json));
+  // var jsonClone =  _.cloneDeep(json);
   var wrapper = document.getElementById("wrapper");
   wrapper.innerHTML = "";
 
   filters = document.getElementById("filters").value.split("\n");
   deleteEmptyFromArray(filters);
 
+
   var filterObj = jsonClone;
   if (filters.length !== 0) filterObj = exploreJsonNode(jsonClone, jsonClone, filters, []);
 
   var tree = jsonTree.create(filterObj, wrapper);
   tree.expand();
+
+	var column = Number($('input[type=radio][name=column]:checked').val());
+	if (column === 3)	$('#wrapper').find('.jsontree_value_array').parent().siblings('.jsontree_label-wrapper').find('.jsontree_label').css('background', 'orange');
 }
 
 function exploreJsonNode(srcObj, currObj, filterWords, path) {
@@ -2338,46 +2361,21 @@ function exploreJsonNode(srcObj, currObj, filterWords, path) {
 		for (var i = 0; i < keys.length; i++) {
 			exploreJsonNode(srcObj, currObj[keys[i]], filterWords, path.concat(keys[i]));
 		}
-    var findWord = false;
-    // console.log(path, "path");
-    for (var k = 0; k < filterWords.length; k++) {
-      var delta = 1;
-      if (path.length && (Number(path[path.length - 1]) || Number(path[path.length - 1]) === 0)) delta = 2;
-      if (path.length &&  path[path.length - delta].indexOf(filterWords[k]) !== -1) { // If the path contains the searched value - delete it    // Specifique Generique
-        findWord = true;
-        break;
-      }
-    }
-    if (Object.keys(currObj).length === 0 && !findWord) deleteDeepKey(srcObj, path);
 
+		deleteKeyFromObject(srcObj, currObj, filterWords, path);
 	} else if (Object.prototype.toString.call(currObj) === '[object Array]') { // if Array - go deeper with save path
 		for (var j = 0; j < currObj.length; j++) {
 			exploreJsonNode(srcObj, currObj[j], filterWords, path.concat(j));
 		}
 
 		deleteEmptyFromArray(currObj);
-		if (currObj.length === 0) deleteDeepKey(srcObj, path);
-
-    // var findWord = false;
-    // console.log(path, "path arr");
-    // for (var k = 0; k < filterWords.length; k++) {
-    //   if (path[path.length - 1].indexOf(filterWords[k]) !== -1) { // If the path contains the searched value - delete it    // Specifique Generique
-    //     findWord = true;
-    //     break;
-    //   }
-    // }
-
-
+		deleteKeyFromArray(srcObj, currObj, filterWords, path);
 	} else { // check path
-		// var findWord = false;
-		// for (var k = 0; k < filterWords.length; k++) {
-		// 	if (path[path.length - 1].indexOf(filterWords[k]) !== -1) { // If the path contains the searched value - delete it    // Specifique Generique
-		// 		findWord = true;
-		// 		break;
-		// 	}
-		// }
-		// if (!findWord) deleteDeepKey(srcObj, path);
-    deleteDeepKey(srcObj, path);
+		var column = Number($('input[type=radio][name=column]:checked').val());
+		if (column === 3) deleteKeyFromKey(srcObj, currObj, filterWords, path);
+		else deleteDeepKey(srcObj, path);
+
+
 	}
 
   if (path.length === 0) return srcObj;
@@ -2409,6 +2407,54 @@ function exploreJsonNode(srcObj, currObj, filterWords, path) {
 //
 //   if (path.length === 0) return srcObj;
 // }
+
+function deleteKeyFromObject(srcObj, currObj, filterWords, path) {
+	if (Object.keys(currObj).length === 0) {
+		if (Number(path[path.length - 1]) || Number(path[path.length - 1]) === 0) {
+			deleteDeepKey(srcObj, path);
+		} else {
+			var findWord = false;
+			for (var k = 0; k < filterWords.length; k++) {
+				var delta = 1;
+				// if (path.length &&  path[path.length - 1].indexOf(filterWords[k]) !== -1) { // If the path contains the searched value - delete it    // Specifique Generique
+				if (path[path.length - 1] === filterWords[k]) { // If the path contains the searched value - delete it    // Specifique Generique
+					findWord = true;
+					break;
+				}
+			}
+			if (!findWord) deleteDeepKey(srcObj, path);
+		}
+	}
+}
+
+function deleteKeyFromArray(srcObj, currObj, filterWords, path) {
+	if (currObj.length === 0) {
+		if (Number(path[path.length - 1]) || Number(path[path.length - 1]) === 0) {
+			deleteDeepKey(srcObj, path);
+		} else {
+			var findWord = false;
+			for (var k = 0; k < filterWords.length; k++) {
+				// if (path.length &&  path[path.length - 1].indexOf(filterWords[k]) !== -1) { // If the path contains the searched value - delete it    // Specifique Generique
+				if (path[path.length - 1] === filterWords[k]) { // If the path contains the searched value - delete it    // Specifique Generique
+					findWord = true;
+					break;
+				}
+			}
+			if (!findWord) deleteDeepKey(srcObj, path);
+		}
+	}
+}
+
+function deleteKeyFromKey(srcObj, currObj, filterWords, path) {
+	var findWord = false;
+	for (var k = 0; k < filterWords.length; k++) {
+		if (path[path.length - 1] === filterWords[k]) { // If the path contains the searched value - delete it    // Specifique Generique
+			findWord = true;
+			break;
+		}
+	}
+	if (!findWord) deleteDeepKey(srcObj, path);
+}
 
 function deleteDeepKey(obj, path) {
 	path.reduce(function(r, e, i) {
