@@ -17,13 +17,14 @@
         <input type="file" id="json-file" accept=".json"/> -->
         <br><br>
         <!-- <h3>comparaison_SFD-flux_produit_START.csv</h3> -->
-        <h3>Load CSV-file</h3>
-        <input type="file" id="filters-file" accept=".csv"/>
+        <h3>Load CSV 1</h3>
+        <input type="file" id="macro-csv-file" accept=".csv"/>
         <br><br>
-        <label><input type="radio" name="column" value="4" checked="checked"> 4 column</label>
-        <label><input type="radio" name="column" value="3"> 3 column</label>
+        <h3>Load CSV 2</h3>
+        <input type="file" id="collection-csv-file" accept=".csv"/>
       </div>
-      <textarea id="filters" name="filter" rows="12" cols="40"></textarea>
+      <textarea id="macro-filters" rows="12" cols="40"></textarea>
+      <textarea id="collection-filters" rows="12" cols="40"></textarea>
       <button id="filterBtn">Filter JSON</button>
     </div>
     <div id="wrapper"></div>
