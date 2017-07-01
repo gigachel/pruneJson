@@ -3,6 +3,10 @@
 var macroFiltersWords;
 var collectionsCsv2;
 var attributesCsv2;
+var rawCsvPaths = [];
+// var colors = ['rgba(15, 131, 232, 0.7)', 'rgba(15, 131, 232, 0.4)', 'orange', 'green'];
+var colors = ['transparent', 'rgba(15, 131, 232, 0.7)', 'rgba(15, 131, 232, 0.4)', 'orange', 'rgba(0, 218, 0, 0.5)'];
+var classes = ['transparent', 'dark-blue', 'blue', 'orange', 'green'];
 
 $('#macro-csv-file').on('change', function(e) {
 	var file = e.target.files[0];
@@ -52,6 +56,42 @@ $('#collection-csv-file').on('change', function(e) {
 });
 
 $('#collection-csv-file').on('click', function(e) {
+	this.value = null;
+});
+
+$('#rac-csv-file').on('change', function(e) {
+	var file = e.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    CSV.COLUMN_SEPARATOR = ";";
+
+    var parsedCSV = CSV.parse(e.target.result);
+
+		// console.log(parsedCSV);
+
+		if (parsedCSV && parsedCSV.length > 0) {
+			rawCsvPaths = parsedCSV
+			.slice(2)
+			.map(function(row) {
+				// return [row[1], row[2], row[3], row[5]];
+				row[0] = row[0].split("/").length === 3 ? row[0].split("/")[1] : "";
+				return [row[0], row[1], row[2], row[3], row[5]];
+			});
+
+			// console.log(rawCsvPaths);
+		}
+
+		// if (parsedCSV && parsedCSV.length > 0) {
+		// 	attributesCsv2 = getAttributesCsv2(parsedCSV);
+		// 	collectionsCsv2 = getCollectionsCsv2(parsedCSV);
+		// 	$("#collection-filters").val(attributesCsv2.join("\n"));
+		// }
+  };
+  reader.readAsText(file);
+});
+
+$('#rac-csv-file').on('click', function(e) {
 	this.value = null;
 });
 
@@ -2333,75 +2373,117 @@ var json = ﻿{
 		}
 	]
 };
+// if (json.data) json = json.data;
+var treeNode;
 
-function getAttributesCsv2(pCsv) {
-	return pCsv
-	.map(function(row) {
-		return row[2]; // get 3 column
-	})
-	.filter(function(wrd) {
-		return wrd;
-	})
-	.slice(1); // remove header
-}
-
-function getCollectionsCsv2(pCsv) {
-	return pCsv
-	.map(function(row) {
-		return row[1]; // get 2 column
-	})
-	.filter(function(wrd) {
-		return wrd;
-	})
-	.slice(1); // remove header
-}
+// function getAttributesCsv2(pCsv) {
+// 	return pCsv
+// 	.map(function(row) {
+// 		return row[2]; // get 3 column
+// 	})
+// 	.filter(function(wrd) {
+// 		return wrd;
+// 	})
+// 	.slice(1); // remove header
+// }
+//
+// function getCollectionsCsv2(pCsv) {
+// 	return pCsv
+// 	.map(function(row) {
+// 		return row[1]; // get 2 column
+// 	})
+// 	.filter(function(wrd) {
+// 		return wrd;
+// 	})
+// 	.slice(1); // remove header
+// }
 
 function goFilter() {
-  var jsonClone = JSON.parse(JSON.stringify(json));
+	console.time("go");
+  // var jsonClone = JSON.parse(JSON.stringify(json));
   // var jsonClone =  _.cloneDeep(json);
   $("#wrapper").empty();
 
-  var filterObj = jsonClone;
+  // var filterObj = jsonClone;
   // if (filters.length !== 0) filterObj = exploreJsonNode(jsonClone, jsonClone, filters, []);
 
-  var tree = jsonTree.create(filterObj, wrapper);
-  tree.expand();
+  var tree = jsonTree.create(json, wrapper);
+  tree.expand(function(node) {
+  	// console.log(node);
+		// treeNode = node;
+		node.expand(true);
 
-	
-	styleJsonType1(macroFiltersWords);
-	styleJsonType2(collectionsCsv2);
+		exploreTreeNode(node, []);
+		console.timeEnd("go");
+
+
+  });
+
+	function exploreTreeNode(treeNode, path) {
+		for (var i = 0; i < treeNode.childNodes.length; i++) {
+			path = path.concat(treeNode.childNodes[i].label);
+			if (treeNode.childNodes[i].parent.type !== "array") {
+				var childPath = [];
+		    for (var k = 0; k < path.length; k++) { // filter path
+					if (!Number(path[k]) && path[k] !== 0) childPath.push(path[k]);
+		    }
+
+				for (var j = 0; j < rawCsvPaths.length; j++) {
+					var rawCsvPath = rawCsvPaths[j];
+					var csvPath = [];
+			    for (var l = 0; l < rawCsvPath.length; l++) { // filter rawCsvPath
+						if (rawCsvPath[l]) csvPath.push(rawCsvPath[l]);
+			    }
+
+					var csvPathShort = csvPath.slice(0, childPath.length); // make csvPath length to childPath length
+					if (csvPathShort.toString() === childPath.toString()) {
+					  var level = rawCsvPath.lastIndexOf(childPath[childPath.length - 1]);
+						$(treeNode.childNodes[i].el.firstElementChild).find('.jsontree_label').first().addClass(classes[level]);
+						break;
+					}
+				}
+			}
+
+			if (treeNode.childNodes[i].isComplex) exploreTreeNode(treeNode.childNodes[i], path);
+			path.splice(-1);
+		}
+	}
+
+
+	// styleJsonType1(macroFiltersWords);
+	// styleJsonType2(collectionsCsv2);
 	// styleJsonType2(attributesCsv2);
 }
 
-function styleJsonType1(words) {
-	if (words) {
-		$('.jsontree_label').each(function(i, item) {
-			var label = $(item).text().replace(/\"/g, "");
-			words.forEach(function(wrd) {
-				if (wrd === label) $(item).css({
-					'padding': '8px',
-					'background': 'rgba(15, 131, 232, 0.5)'
-				});
-			});
-		})
-	}
-}
-
-function styleJsonType2(words) {
-	if (words) {
-		// $('#wrapper').find('.jsontree_value_array').parent().siblings('.jsontree_label-wrapper').find('.jsontree_label').css({
-		// 	'padding': '8px',
-		// 	'background': 'orange'
-		// });
-
-		$('.jsontree_label').each(function(i, item) {
-			var label = $(item).text().replace(/\"/g, "");
-			words.forEach(function(wrd) {
-				if (wrd === label) $(item).css({
-					'padding': '8px',
-					'background': 'orange'
-				});
-			});
-		})
-	}
-}
+// function styleJsonType1(words) {
+// 	if (words) {
+// 		$('.jsontree_label').each(function(i, item) {
+// 			var label = $(item).text().replace(/\"/g, "");
+// 			words.forEach(function(wrd) {
+// 				if (wrd === label) $(item).css({
+// 					'padding': '8px',
+// 					'background': 'rgba(15, 131, 232, 0.5)'
+// 				});
+// 			});
+// 		})
+// 	}
+// }
+//
+// function styleJsonType2(words) {
+// 	if (words) {
+// 		// $('#wrapper').find('.jsontree_value_array').parent().siblings('.jsontree_label-wrapper').find('.jsontree_label').css({
+// 		// 	'padding': '8px',
+// 		// 	'background': 'orange'
+// 		// });
+//
+// 		$('.jsontree_label').each(function(i, item) {
+// 			var label = $(item).text().replace(/\"/g, "");
+// 			words.forEach(function(wrd) {
+// 				if (wrd === label) $(item).css({
+// 					'padding': '8px',
+// 					'background': 'orange'
+// 				});
+// 			});
+// 		})
+// 	}
+// }

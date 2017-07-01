@@ -34,3 +34,25 @@ body {
   /*display: block;
   overflow: hidden;*/
 }
+
+/*'rgba(15, 131, 232, 0.7)', 'rgba(15, 131, 232, 0.4)', 'orange', 'rgba(0, 218, 0, 0.5)'*/
+
+.dark-blue {
+  padding: 8px;
+  background-color: rgba(15, 131, 232, 0.7);
+}
+
+.blue {
+  padding: 8px;
+  background-color: rgba(15, 131, 232, 0.4);
+}
+
+.orange {
+  padding: 8px;
+  background-color: orange;
+}
+
+.green {
+  padding: 8px;
+  background-color: rgba(0, 218, 0, 0.5);
+}
