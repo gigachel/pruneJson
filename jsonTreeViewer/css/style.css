@@ -1,41 +1,30 @@
+
 body {
   padding: 20px;
 }
 
-.line > * {
+/*.line > * {
   vertical-align: top;
-}
+}*/
 
 .files {
-  display: inline-block;
+  /*display: inline-block;*/
+  overflow: hidden;
 }
 
-.jsontree_label {
-  /*display: inline-block;
-  width: 300px;
-  text-align: center;*/
-  /*padding: 8px;
-  background: rgba(15, 131, 232, 0.5);*/
+.files > * {
+  float: left;
+  width: 320px;
+  height: 80px;
 }
 
 .jsontree_node  {
   padding: 9px 0;
 }
 
-/*.jsontree_label-wrapper {
-  padding-top: 5px;
-}*/
-
 .jsontree_child-nodes {
   margin-top: 9px;
 }
-
-.jsontree_node {
-  /*display: block;
-  overflow: hidden;*/
-}
-
-/*'rgba(15, 131, 232, 0.7)', 'rgba(15, 131, 232, 0.4)', 'orange', 'rgba(0, 218, 0, 0.5)'*/
 
 .dark-blue {
   padding: 8px;

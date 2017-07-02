@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter JSON</title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/jsonTree.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+<!-- import JavaScript -->
+
+  </head>
+  <body>
+    <div class="line">
+      <div class="files">
+        <h3>flux_produit</h3>
+        <!-- <h3>Load JSON-file</h3>
+        <input type="file" id="json-file" accept=".json"/> -->
+        <br><br>
+        <!-- <h3>comparaison_SFD-flux_produit_START.csv</h3> -->
+        <!-- <h3>Load CSV 1</h3>
+        <input type="file" id="macro-csv-file" accept=".csv"/>
+        <br><br>
+        <h3>Load CSV 2</h3>
+        <input type="file" id="collection-csv-file" accept=".csv"/> -->
+        <br><br>
+        <h3>Load RAC CSV</h3>
+        <input type="file" id="rac-csv-file" accept=".csv"/>
+      </div>
+      <!-- <textarea id="macro-filters" rows="12" cols="40"></textarea>
+      <textarea id="collection-filters" rows="12" cols="40"></textarea> -->
+      <button id="filterBtn">Filter JSON</button>
+    </div>
+    <div id="wrapper"></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jsonTree.js"></script>
+    <script src="js/csv-js.js"></script>
+    <script src="js/app.js"></script>
+    <!-- <script src="https://unpkg.com/lodash@4.17.4"></script> -->
+  </body>
+</html>
