@@ -38,7 +38,13 @@
           </el-upload>
         </div>
         <br>
+        <el-checkbox v-model="showBlue" @change="toggleShow" class="blue-check">blue</el-checkbox>
+        <el-checkbox v-model="showOrange" @change="toggleShow" class="orange-check">orange</el-checkbox>
+        <!-- <el-checkbox v-model="showSalmon" @change="toggleShow" class="salmon-check">salmon</el-checkbox> -->
+        <el-checkbox v-model="showGreen" @change="toggleShow" class="green-check">green</el-checkbox>
+        <br><br>
         <el-button type="success" @click="paintJSON" :loading="treeLoading">Paint the JSON</el-button>
+        <hr>
       </div>
       <div id="tree-wrapper"></div>
     </div>

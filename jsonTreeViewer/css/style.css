@@ -31,17 +31,46 @@ body {
   background-color: rgba(15, 131, 232, 0.7);
 }
 
-.blue {
+.blue-node {
   padding: 8px;
   background-color: rgba(15, 131, 232, 0.4);
 }
 
-.orange {
+.orange-node {
   padding: 8px;
   background-color: orange;
 }
 
-.green {
+.salmon-node {
   padding: 8px;
+  background-color: salmon;
+}
+
+.green-node {
+  padding: 8px;
+  background-color: rgba(0, 218, 0, 0.5);
+}
+
+.orange-check .el-checkbox__input .el-checkbox__inner {
+  border-color: orange;
+}
+
+.orange-check .el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: orange;
+}
+
+.salmon-check .el-checkbox__input .el-checkbox__inner {
+  border-color: salmon;
+}
+
+.salmon-check .el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: salmon;
+}
+
+.green-check .el-checkbox__input .el-checkbox__inner {
+  border-color: rgba(0, 218, 0, 0.5);
+}
+
+.green-check .el-checkbox__input.is-checked .el-checkbox__inner {
   background-color: rgba(0, 218, 0, 0.5);
 }

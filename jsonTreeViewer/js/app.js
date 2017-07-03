@@ -2277,8 +2277,13 @@ new Vue({
 			]
 		},
 		rawCsvPaths: [],
-		classes: ['transparent', 'dark-blue', 'blue', 'orange', 'green'],
-		treeLoading: false
+		classes: ['transparent', 'blue-node', 'blue-node', 'orange-node', 'green-node'],
+		tree: {},
+		treeLoading: false,
+		showBlue: true,
+		showOrange: true,
+		showSalmon: true,
+		showGreen: true,
 	},
 	methods: {
 		loadJson: function(response, file, fileList) {
@@ -2324,6 +2329,18 @@ new Vue({
 			this.$refs.csvFile.$refs['upload-inner'].$refs.input.value = ""; // HACK for clear when :auto-upload="false"
 			this.rawCsvPaths = []; // clear csv paths
 		},
+		toggleShow: function() {
+			$('.blue-node').closest('.jsontree_node').toggle(this.showBlue);
+			$('.orange-node').closest('.jsontree_node').toggle(this.showOrange);
+			$('.salmon-node').closest('.jsontree_node').toggle(this.showSalmon);
+			$('.green-node').closest('.jsontree_node').toggle(this.showGreen);
+		},
+		expandAll: function() {
+			self.tree.expand();
+		},
+		collapseAll: function() {
+			self.tree.collapse();
+		},
 		paintJSON: function() {
 			var self = this;
 			var json = self.json;
@@ -2334,10 +2351,13 @@ new Vue({
 
 			setTimeout(function() { // HACK for init loading
 			  var tree = jsonTree.create(json, $("#tree-wrapper")[0]);
+				console.log(tree);
+				self.tree = tree;
 			  tree.expand(function(node) {
 			  	node.expand(true);
 					exploreTreeNode(node, []);
 			  });
+				self.toggleShow();
 				self.treeLoading = false;
 			}, 300);
 
