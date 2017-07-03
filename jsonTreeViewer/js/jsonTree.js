@@ -745,7 +745,7 @@ var jsonTree = (function() {
                 if (typeof filterFunc == 'function') {
                     this.rootNode.childNodes.forEach(function(item, i) {
                         if (item.isComplex && filterFunc(item)) {
-                            item.expandParent('recursive');
+                            item.expand();
                         }
                     });
                 } else {
