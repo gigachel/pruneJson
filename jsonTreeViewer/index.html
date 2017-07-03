@@ -8,6 +8,7 @@
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/jsonTree.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/jquery-powertip@1.3.0/dist/css/jquery.powertip.min.css">
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -38,9 +39,14 @@
           </el-upload>
         </div>
         <br>
-        <el-checkbox v-model="showBlue" @change="toggleShow" class="blue-check">blue</el-checkbox>
+        <el-button type="" @click="expandAll" size="small">Expand All</el-button>
+        <el-button type="" @click="collapseAll" size="small">Collapse All</el-button>
+        <el-button type="" @click="expandBlue" size="small">Expand Blue</el-button>
+        <el-button type="" @click="collapseBlue" size="small">Collapse Blue</el-button>
+        <br><br>
+        <el-checkbox v-model="showBlue" @change="toggleShow" class="blue-check powertip" data-powertip="321">blue</el-checkbox>
         <el-checkbox v-model="showOrange" @change="toggleShow" class="orange-check">orange</el-checkbox>
-        <!-- <el-checkbox v-model="showSalmon" @change="toggleShow" class="salmon-check">salmon</el-checkbox> -->
+        <el-checkbox v-model="showSalmon" @change="toggleShow" class="salmon-check">salmon</el-checkbox>
         <el-checkbox v-model="showGreen" @change="toggleShow" class="green-check">green</el-checkbox>
         <br><br>
         <el-button type="success" @click="paintJSON" :loading="treeLoading">Paint the JSON</el-button>
@@ -52,8 +58,8 @@
     <script src="js/jquery.js"></script>
     <script src="js/jsonTree.js"></script>
     <script src="https://unpkg.com/vue@2.3.4/dist/vue.min.js"></script>
-    <!-- <script src="https://unpkg.com/vue"></script> -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/jquery-powertip@1.3.0/dist/jquery.powertip.min.js"></script>
     <script src="js/csv-js.js"></script>
     <script src="js/app.js"></script>
     <!-- <script src="https://unpkg.com/lodash@4.17.4"></script> -->

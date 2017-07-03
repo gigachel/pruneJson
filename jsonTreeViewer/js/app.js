@@ -2277,7 +2277,7 @@ new Vue({
 			]
 		},
 		rawCsvPaths: [],
-		classes: ['transparent', 'blue-node', 'blue-node', 'orange-node', 'green-node'],
+		classes: ['transparent', 'blue-node', 'blue-node', 'orange-node', 'green-node', 'salmon-node'],
 		tree: {},
 		treeLoading: false,
 		showBlue: true,
@@ -2318,7 +2318,7 @@ new Vue({
 					.slice(2)
 					.map(function(row) {
 						row[0] = row[0].split("/").length === 3 ? row[0].split("/")[1] : "";
-						return [row[0], row[1], row[2], row[3], row[5]];
+						return [row[0], row[1], row[2], row[3], row[5], row[4]]; // row[4] maybe == "X"
 					});
 				}
 		  };
@@ -2336,10 +2336,46 @@ new Vue({
 			$('.green-node').closest('.jsontree_node').toggle(this.showGreen);
 		},
 		expandAll: function() {
-			self.tree.expand();
+			if (this.tree.expand) this.tree.expand();
 		},
 		collapseAll: function() {
-			self.tree.collapse();
+			if (this.tree.collapse) this.tree.collapse();
+		},
+		expandBlue: function() {
+			var self = this;
+			if (!this.tree.collapse) return;
+			this.tree.collapse();
+			expandBlueRecursive(this.tree.rootNode);
+
+			function expandBlueRecursive(item) {
+				if (item.el.className.indexOf("blue-node") !== -1) {
+					if (item.isComplex) item.expand();
+					item.expandParent();
+				}
+				if (item.isComplex) {
+					for (var i = 0; i < item.childNodes.length; i++) {
+						expandBlueRecursive(item.childNodes[i]);
+					}
+				}
+			}
+		},
+		collapseBlue: function() {
+			var self = this;
+			if (!this.tree.collapse) return;
+			// this.tree.expand();
+			collapseBlueRecursive(this.tree.rootNode);
+
+			function collapseBlueRecursive(item) {
+				if (item.el.className.indexOf("blue-node") !== -1) {
+					if (item.isComplex) item.collapse();
+					// item.expandParent();
+				}
+				if (item.isComplex) {
+					for (var i = 0; i < item.childNodes.length; i++) {
+						collapseBlueRecursive(item.childNodes[i]);
+					}
+				}
+			}
 		},
 		paintJSON: function() {
 			var self = this;
@@ -2359,6 +2395,7 @@ new Vue({
 			  });
 				self.toggleShow();
 				self.treeLoading = false;
+				$('.powertip').powerTip();
 			}, 300);
 
 			function exploreTreeNode(treeNode, path) {
@@ -2380,7 +2417,11 @@ new Vue({
 							var csvPathShort = csvPath.slice(0, childPath.length); // make csvPath length to childPath length
 							if (csvPathShort.toString() === childPath.toString()) {
 							  var level = rawCsvPath.lastIndexOf(childPath[childPath.length - 1]);
-								$(treeNode.childNodes[i].el.firstElementChild).find('.jsontree_label').first().addClass(self.classes[level]);
+								if (level === 4 && rawCsvPath[5] === "X") level = 5; // correct level if "X"
+								// $(treeNode.childNodes[i].el.firstElementChild).find('.jsontree_label').first().addClass(self.classes[level]);
+								$(treeNode.childNodes[i].el).addClass(self.classes[level]);
+
+								$(treeNode.childNodes[i].el.firstElementChild.firstElementChild).addClass('powertip').data('powertip', self.classes[level]);
 								break;
 							}
 						}

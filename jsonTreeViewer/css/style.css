@@ -26,27 +26,27 @@ body {
   margin-top: 9px;
 }
 
-.dark-blue {
+.jsontree_node.dark-blue > .jsontree_label-wrapper > .jsontree_label {
   padding: 8px;
   background-color: rgba(15, 131, 232, 0.7);
 }
 
-.blue-node {
+.jsontree_node.blue-node > .jsontree_label-wrapper > .jsontree_label {
   padding: 8px;
   background-color: rgba(15, 131, 232, 0.4);
 }
 
-.orange-node {
+.jsontree_node.orange-node > .jsontree_label-wrapper > .jsontree_label {
   padding: 8px;
   background-color: orange;
 }
 
-.salmon-node {
+.jsontree_node.salmon-node > .jsontree_label-wrapper > .jsontree_label {
   padding: 8px;
   background-color: salmon;
 }
 
-.green-node {
+.jsontree_node.green-node > .jsontree_label-wrapper > .jsontree_label {
   padding: 8px;
   background-color: rgba(0, 218, 0, 0.5);
 }
