@@ -18,6 +18,10 @@ body {
   height: 80px;
 }
 
+.word-break {
+  word-break: break-all;
+}
+
 .jsontree_node  {
   padding: 9px 0;
 }
