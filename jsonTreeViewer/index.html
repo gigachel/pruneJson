@@ -13,10 +13,10 @@
   </head>
   <body>
     <div id="app">
-      <div class="line" >
+      <div class="line">
         <div class="files">
-          <h3>flux_produit</h3>
-          <!-- <el-upload
+          <!-- <h3>flux_produit</h3> -->
+          <el-upload
             ref="jsonFile"
             action=""
             :auto-upload="false"
@@ -25,7 +25,7 @@
             :on-remove="clearJson"
             >
             <el-button slot="trigger" type="primary" @click="clearJson">Load JSON</el-button>
-          </el-upload> -->
+          </el-upload>
           <el-upload
             ref="csvFile"
             action=""
@@ -52,6 +52,15 @@
         <el-button type="success" @click="paintJSON" :loading="treeLoading">Paint the JSON</el-button>
         <hr>
       </div>
+      <el-dialog
+        title="Spec name"
+        :visible.sync="dialogVisible"
+        size="tiny">
+        <span class="word-break">{{specName}}</span>
+        <span slot="footer" class="dialog-footer">
+          <el-button type="primary" @click="dialogVisible = false">Close</el-button>
+        </span>
+      </el-dialog>
       <div id="tree-wrapper"></div>
     </div>
 
