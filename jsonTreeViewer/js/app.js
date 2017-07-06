@@ -1,7 +1,7 @@
 new Vue({
 	el: '#app',
 	data: {
-		json: ﻿{},
+		json: {},
 		rawCsvPaths: [],
 		classes: ['transparent', 'blue-node', 'blue-node', 'orange-node', 'green-node', 'salmon-node'],
 		tree: {},
@@ -28,7 +28,7 @@ new Vue({
 		clearJson: function() {
 			this.$refs.jsonFile.clearFiles();
 			this.$refs.jsonFile.$refs['upload-inner'].$refs.input.value = ""; // HACK for clear when :auto-upload="false"
-			this.json = []; // clear csv paths
+			this.json = {}; // clear json
 		},
 		parseCsv: function(response, file, fileList) {
 			var self = this;
@@ -47,13 +47,13 @@ new Vue({
 					.map(function(row) {
 						row[0] = row[0].split("/").length === 3 ? row[0].split("/")[1] : "";
 						return [
-							row[0],
-							row[1],
-							row[2],
-							row[3],
-							row[5],
-							row[4], // maybe == "X" for green
-							row[10] // spec name for green
+							row[0], // [0] 0 level - additional path for 1 level
+							row[1], // [1] 1 level: blue (Macro-attribut)
+							row[2], // [2] 2 level: blue (Sous-MA)
+							row[3], // [3] 3 level: orange (Collection)
+							row[5], // [4] 4 level: salmon/green (Codification/Attribut)
+							row[4], // [5] maybe == "X" for green
+							row[10] // [6] spec name for 4 level
 						];
 					});
 				}
@@ -178,14 +178,13 @@ new Vue({
 		paintJSON: function() {
 			var self = this;
 			var json = self.json;
-			// var rawCsvPaths = self.rawCsvPaths;
 
 			self.treeLoading = true;
 			$("#tree-wrapper").empty();
 
 			setTimeout(function() { // HACK for init loading
 			  var tree = jsonTree.create(json, $("#tree-wrapper")[0]);
-				console.log(tree);
+				// console.log(tree);
 				self.tree = tree;
 			  tree.expand(function(node) {
 			  	node.expand(true);
@@ -196,46 +195,6 @@ new Vue({
 				self.setPopup();
 				self.treeLoading = false;
 			}, 300);
-
-			// function exploreTreeNode(treeNode, path) {
-			// 	for (var i = 0; i < treeNode.childNodes.length; i++) {
-			// 		path = path.concat(treeNode.childNodes[i].label); // set path on begin
-			// 		if (treeNode.childNodes[i].parent.type !== "array") {
-			// 			var childPath = [];
-			// 	    for (var k = 0; k < path.length; k++) { // filter path
-			// 				if (!Number(path[k]) && path[k] !== 0) childPath.push(path[k]);
-			// 	    }
-			//
-			// 			for (var j = 0; j < rawCsvPaths.length; j++) {
-			// 				var rawCsvPath = rawCsvPaths[j];
-			// 				var csvPath = [];
-			// 		    for (var l = 0; l < rawCsvPath.length; l++) { // filter rawCsvPath
-			// 					if (rawCsvPath[l]) csvPath.push(rawCsvPath[l]);
-			// 		    }
-			//
-			// 				var csvPathShort = csvPath.slice(0, childPath.length); // make csvPath length to childPath length
-			// 				if (csvPathShort.toString() === childPath.toString()) {
-			// 				  var level = rawCsvPath.lastIndexOf(childPath[childPath.length - 1]);
-			// 					if (level === 4) { // for green
-			// 						if (rawCsvPath[5] === "X") level = 5; // correct level if "X"
-			// 						$(treeNode.childNodes[i].el).data('spec', rawCsvPath[6]);
-			// 					}
-			// 					// $(treeNode.childNodes[i].el.firstElementChild).find('.jsontree_label').first().addClass(self.classes[level]);
-			// 					$(treeNode.childNodes[i].el).addClass(self.classes[level]);
-			//
-			// 					break;
-			// 				}
-			// 			}
-			// 		}
-			//
-			// 		if (treeNode.childNodes[i].type === "object") {
-			// 			$(treeNode.childNodes[i].el.firstElementChild.firstElementChild).addClass('powertip');//.data('powertip', self.classes[level]);
-			// 		}
-			//
-			// 		if (treeNode.childNodes[i].isComplex) exploreTreeNode(treeNode.childNodes[i], path);
-			// 		path.splice(-1); // return one level up on the end
-			// 	}
-			// }
 		}
 	}
 
